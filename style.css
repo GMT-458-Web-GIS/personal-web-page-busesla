@@ -1,0 +1,124 @@
+/* 1. Gün: Genel Stil ve Navigasyon */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+header h1 {
+    margin-bottom: 0.5em;
+}
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+nav ul li a.active {
+    background-color: #007bff;
+    font-weight: bold;
+}
+main {
+    padding: 20px;
+    min-height: 70vh;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* 2. GÜN: Hobiler Tablosu  */
+.hobbies-list table {
+    width: 85%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Kenarlıkları birleştir */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Hafif gölge */
+    background-color: #fff;
+}
+.hobbies-list th, .hobbies-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.hobbies-list th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+/* Tablo Görseli Stili */
+.hobi-img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+/* Satır Üzerine Gelme Etkisi (Görsel kalite için) */
+.hobbies-list tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hakkımda (about.html) Kart Stili (Daha iyi görünüm için) */
+.profile-card {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Daire şeklinde profil fotoğrafı */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007bff;
+}
+/* 2. GÜN: Keyframes Animasyonu */
+.animated-heading { /* index, about ve hobbies'deki başlıklar için */
+    color: #007bff;
+    font-size: 2.5em;
+    opacity: 0; /* Başlangıçta görünmez yap */
+    animation: fadeInDown 1.5s ease-out forwards; /* Animasyonu uygula */
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Yukarıdan başla */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Normal pozisyona gel */
+    }
+}
+
+/* İsteğe Bağlı: Navigasyona Geçiş (Transition) Eklenmesi (Animasyonun bir türü) */
+nav ul li a {
+    /* Bu satırı 1. Gün CSS kodundaki nav ul li a bloğu içinde güncelleyin */
+    transition: background-color 0.3s, transform 0.3s;
+}
+nav ul li a:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Fare üzerine gelince hafif büyüme efekti */
+}

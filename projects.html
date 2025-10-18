@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projelerim</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <h1>Buse Sıla Dolu - Web-GIS Portföyü</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda Bilgi</a></li>
+                <li><a href="projects.html" class="active">Projeler & OpenLayers</a></li>
+                <li><a href="hobbies.html">Hobilerim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <h2 class="animated-heading">Projelerim</h2>
+    
+    <p>Bu kısımda, bugüne kadar yaptığım çalışmalar ve İnternet Tabanlı CBS dersi kapsamında geliştirdiğim Web-GIS projesi yer almaktadır. Projelerimi inceleyebilirsiniz:</p>
+    
+    <div class="project-cards-container">
+
+        <div class="project-card webgis-project">
+            <h3>1. Web-GIS Portföy Haritası</h3>
+            <p>Bu, ders kapsamında geliştirilen temel projedir. OpenLayers kütüphanesi kullanılarak bir OSM (OpenStreetMap) altlık katmanı entegre edilmiş ve [örneğin: bulunduğum bölgeye] merkezlenmiştir. Amaç: HTML, CSS ve OL yetkinliklerini göstermek.</p>
+            <p class="tech-stack">Kullanılan Teknolojiler: HTML, CSS, OpenLayers, JavaScript</p>
+            </div>
+
+        <div class="project-card other-project">
+            <h3>2. [Projenizin Adı]</h3>
+            <p>[Projenizin kısa bir açıklamasını yazın: Projenin amacı, kullanılan veriler veya elde edilen sonuç.] Örneğin: "QGIS kullanarak İstanbul'daki yeşil alanların erişilebilirliğini analiz eden bir mekansal analiz projesidir."</p>
+            <p class="tech-stack">Kullanılan Teknolojiler: [Örn: QGIS, Python, ArcGIS, SQL, vb.]</p>
+            <a href="[Projenizin GitHub veya Rapor Linki]" target="_blank" class="project-link">Projeyi İncele (İsteğe Bağlı)</a>
+        </div>
+
+    </div> 
+    <div id="map-container">
+        <h3>OpenLayers Haritası</h3>
+        <div id="map" style="height: 400px; border: 1px solid #ccc;">
+            Harita Yükleniyor...
+        </div>
+    </div>
+</main>
+
+    <footer><p>&copy; 2025. Tüm Hakları Saklıdır.</p></footer>
+</body>
+</html>
