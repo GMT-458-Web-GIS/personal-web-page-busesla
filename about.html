@@ -1,39 +1,63 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hakkımda Bilgi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="sky-bg">
     <header>
-        <h1>Buse Sıla Dolu - Web-GIS Portföyü</h1>
-        <nav>
+        <h1>Buse Sıla Dolu's Web-GIS Portfolio</h1>
+        <nav class="nav-animated"> 
             <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html" class="active">Hakkımda Bilgi</a></li>
-                <li><a href="projects.html">Projeler & OpenLayers</a></li>
-                <li><a href="hobbies.html">Hobilerim</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Me</a></li>
+                <li><a href="education_projects.html">Education & Projects</a></li>
+                <li><a href="map.html">Visited Places Map</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="hakkimda">
-            <h2 class="animated-heading">Kendim Hakkında Bilgi</h2>
+            <h2 class="animated-heading">About Me</h2>
             <div class="profile-card">
-                <img src="images/profile.jpg" alt="Profil Fotoğrafınız" class="profile-img">
-                <p>Merhaba! Ben Buse Sıla Dolu. Hacettepe Üniversitesi'nde Harita Mühendisliği öğrencisiyim. Bu dönem iki CBS dersini de ilk defa almamla birlikte , bu alana ilgi duyduğumu fark ettim. İnternet Tabanlı CBS dersi kapsamında Web haritalama teknolojilerindeki becerilerimi geliştirmeyi hedefliyorum.</p>
-                <h3>Eğitim ve Deneyim</h3>
-                <ul>
-                    <li>Tapu Kadastro Mesleki ve Teknik Anadolu Lisesi - 2020</li>
-                    </li>Hacettepe Üniversitesi - Harita Mühendisliği (Devam Ediyor)</li>
-                    <li>Başarsoft Data biriminde zorunlu staj</li>
-                </ul>
+                <img src="images/profile.jpg" alt="Profile Photo" class="profile-img">
+                <p>Hi! I'm Buse Sıla Dolu, a student at Hacettepe University. My passion in GIS and web technologies motivates me to investigate how spatial data influences our reality. This project is a step in demonstrating my fundamental skills in web mapping with OpenLayers, HTML, and CSS.</p>
+                <h3>My Hobbies </h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Hobby/Interest</th>
+                            <th>Description</th>
+                            <th>Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="images/dance.png" alt="Dance Icon" class="hobi-img"></td>
+                            <td>Dancing (Hiphop)</td>
+                            <td>Releasing energy and stress through rhythmic Hiphop dance.</td>
+                            <td>2-3 times a week</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/movie.png" alt="Movie Icon" class="hobi-img"></td>
+                            <td>Watching Movies/Series</td>
+                            <td>To watch TV series and movies from various countries, such as Turkiye, America, and Korea etc.</td>
+                            <td>Weekly</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/travel.png" alt="Travel Icon" class="hobi-img"></td>
+                            <td>Traveling</td>
+                            <td>Discovering new geographies, cities, and cultures to enhance my spatial awareness.</td>
+                            <td>Several times a year</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
-
-    <footer><p>&copy; 2025. Tüm Hakları Saklıdır.</p></footer>
+    <footer><p>&copy; 2025. All Rights Reserved.</p></footer>
 </body>
 </html>

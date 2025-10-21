@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visited Places Map</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+</head>
+<body class="sky-bg">
+    <header>
+        <h1>Buse Sıla Dolu's Web-GIS Portfolio</h1>
+        <nav class="nav-animated"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="education_projects.html">Education & Projects</a></li>
+                <li><a href="map.html" class="active">Visited Places Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="animated-heading">My Visited Places</h2>
+        <p>The map below uses OpenLayers to mark 15 cities I have had the chance to visit in Turkey and Cyprus. Click and drag to explore!</p>
+        
+        <div id="map-container">
+            <h3>OpenLayers Map</h3>
+            <div id="map" style="height: 500px; border: 1px solid #ccc;">
+                Map is loading...
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2025. All Rights Reserved.</p></footer>
+
+    <script>
+        var visitedPlaces = [
+            { name: "Ankara", coords: [32.85, 39.93] },
+            { name: "Hakkari", coords: [43.74, 37.58] },
+            { name: "Van", coords: [43.38, 38.48] },
+            { name: "Cyprus (Kıbrıs)", coords: [33.37, 35.18] },
+            { name: "Istanbul", coords: [28.98, 41.01] },
+            { name: "Izmir", coords: [27.14, 38.42] },
+            { name: "Trabzon", coords: [39.73, 41.00] },
+            { name: "Rize", coords: [40.52, 41.03] },
+            { name: "Gumushane", coords: [39.48, 40.47] },
+            { name: "Malatya", coords: [38.35, 38.35] },
+            { name: "Antalya", coords: [30.72, 36.89] },
+            { name: "Mersin", coords: [34.64, 36.81] },
+            { name: "Nigde", coords: [34.67, 37.97] },
+            { name: "Konya", coords: [32.48, 37.87] },
+            { name: "Balikesir", coords: [27.89, 39.64] }
+        ];
+
+        var features = visitedPlaces.map(function(place) {
+            var coords3857 = ol.proj.fromLonLat(place.coords);
+            var point = new ol.Feature({
+                geometry: new ol.geom.Point(coords3857),
+                name: place.name
+            });
+            return point;
+        });
+
+        var vectorSource = new ol.source.Vector({ features: features });
+
+        var vectorLayer = new ol.layer.Vector({
+            source: vectorSource,
+            style: new ol.style.Style({
+                image: new ol.style.Icon({
+                    anchor: [0.5, 46], 
+                    anchorXUnits: 'fraction',
+                    anchorYUnits: 'pixels',
+                    src: 'images/pin_icon.png', 
+                    scale: 0.1
+                })
+            })
+        });
+
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({ source: new ol.source.OSM() }),
+                vectorLayer 
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([35.0, 39.0]), 
+                zoom: 6 
+            })
+        });
+
+</script>
+</body>
+</html>

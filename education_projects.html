@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education & Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="sky-bg">
+    <header>
+        <h1>Buse Sıla Dolu's Web-GIS Portfolio</h1>
+        <nav class="nav-animated"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="education_projects.html" class="active">Education & Projects</a></li>
+                <li><a href="map.html">Visited Places Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="animated-heading">Education & Projects</h2>
+        
+        <h3>Education</h3>
+        <p>Hacettepe University - Geomatics Engineering (Current Student)</p>
+        <p>Tapu Kadastro MTAL - 2021</p>
+
+        <div class="project-cards-container">
+
+            <div class="project-card webgis-project">
+                <h3>1. Web-GIS Portfolio Map</h3>
+                <p>This map, developed for the Web-GIS course, integrates the OpenLayers library with an OSM base layer. It marks all the cities I have visited across Turkey and Cyprus. Objective: Demonstrate proficiency in OL, HTML, and CSS.</p>
+                <p class="tech-stack">Technologies Used: HTML, CSS, OpenLayers, JavaScript</p>
+                <a href="map.html" class="project-link">View Map</a>
+            </div>
+
+            <div class="project-card other-project">
+                <h3>2. Shopping Mall Event Data Collection and API Integration </h3>
+                <p>This project utilized BeautifulSoup (bs4) for web scraping to collect standardized event data (name, date, location, etc.) from shopping malls across Turkey's three major cities (Ankara, Istanbul, and Izmir). We implemented site-specific parsing logic to accommodate diverse HTML structures, unifying the outputs into a common schema. A central main.py script aggregated the data, which was then made accessible through an API. This process established a robust data pipeline, allowing external systems to easily consume the standardized event information.</p>
+                <div class="project-images">
+                    <img src="images/project2_img1.jpg" alt="Project 2 Image 1">
+                    <img src="images/project2_img2.jpg" alt="Project 2 Image 2">
+                </div>
+                <p class="tech-stack">Technologies Used: QGIS, Python, MapInfo, etc.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2025. All Rights Reserved.</p></footer>
+</body>
+</html>
