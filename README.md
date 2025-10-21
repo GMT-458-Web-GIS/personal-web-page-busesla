@@ -1,11 +1,11 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/7C3xAGjq)
-# Buse Sıla Dolu's Web-GIS Portfolio Project
+# Web-GIS Portfolio Project
 
 This project showcases fundamental HTML and CSS skills by creating a responsive Web-GIS portfolio website. The design utilizes a dark theme aesthetic, highlighted with space and geographical background visuals.
 
 ## 🌟 Project Features
 
-- **Technology:** HTML5, CSS3
+- **Technology:** HTML, CSS
 - **Theme:** Dark Mode Aesthetic
 - **Responsiveness:** Fully responsive design (Mobile and Desktop ready).
 - **Key Features:**
@@ -15,6 +15,7 @@ This project showcases fundamental HTML and CSS skills by creating a responsive 
     - **Navigation:** Advanced navigation styles with hover and active states.
     - **Mobile Optimization:** Optimized tabular data display for small screens (hiding headers and utilizing `data-label` technique).
 
-## 📁 File Structure
+## 👾AI Usage
+- I've used ai for handling openlayers and making arrangements for css.Approxametly 1.5 hour of usage.
 
-The project maintains a simple and manageable file structure:
+## Website link :
